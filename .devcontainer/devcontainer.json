@@ -1,0 +1,22 @@
+{
+    "name": "Rex",
+    "dockerComposeFile": [
+        "compose.yaml"
+    ],
+    "service": "bot",
+    "workspaceFolder": "/home/devcontainer/${localWorkspaceFolderBasename}",
+    // "forwardPorts": [],
+    // "runServices": [],
+    // "postCreateCommand": "",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml",
+                "Tyriar.sort-lines"
+            ]
+        }
+    },
+    "remoteUser": "devcontainer"
+}
