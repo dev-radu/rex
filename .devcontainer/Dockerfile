@@ -1,8 +1,16 @@
+# Debian v12.1 Bookworm (Slim Version)
 FROM debian:bookworm-slim
 
-RUN groupadd -g 1000 rex && \
-    useradd -u 1000 -g rex -m -s /bin/bash devcontainer && \
-    echo PS1=\"\\e[1\;32m\\u\\e[0m \\e[1m⟶\\e[0m \\e[34m\\w\\e[0m \\$ \" \
-    >> /home/devcontainer/.bashrc && mkdir -p /home/devcontainer/rex
+ARG NODE_MAJOR_VERSION
+ARG PNPM_MAJOR_VERSION
 
-ENTRYPOINT [ "sh", "-c", "while sleep 1000; do :; done" ]
+ARG GROUP_NAME
+ARG USERNAME
+ARG SHELL
+
+COPY setup.sh .
+
+RUN chmod +x setup.sh && ./setup.sh --quiet
+
+# Necessary for DevContainer configuration.
+ENTRYPOINT [ "bash", "-c", "sleep infinity" ]

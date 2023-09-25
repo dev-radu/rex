@@ -5,5 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        GROUP_NAME: rex
+        USERNAME: developer
+        SHELL: /bin/bash                     # setup.sh expects /bin/bash.
+        NODE_MAJOR_VERSION: 18               # setup.sh expects version 18.
+        PNPM_MAJOR_VERSION: 8                # setup.sh expects version 8.
     volumes:
-      - ..:/home/devcontainer/rex
+      - ..:/home/developer/workspaces/rex    # /../USERNAME/../${localWorkspaceFolderBasename}
+    user: developer:rex                      # USERNAME:GROUP_NAME

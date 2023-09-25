@@ -4,19 +4,30 @@
         "compose.yaml"
     ],
     "service": "bot",
-    "workspaceFolder": "/home/devcontainer/${localWorkspaceFolderBasename}",
-    // "forwardPorts": [],
-    // "runServices": [],
-    // "postCreateCommand": "",
+    "workspaceFolder": "/home/developer/workspaces/${localWorkspaceFolderBasename}",
+    "forwardPorts": [],
+    "runServices": [],
+    "postCreateCommand": "",
     "customizations": {
         "vscode": {
             "extensions": [
+                "aaron-bond.better-comments",
+                "christian-kohler.path-intellisense",
                 "editorconfig.editorconfig",
+                "jasonlhy.hungry-delete",
+                "MohammadBaqer.better-folding",
                 "ms-azuretools.vscode-docker",
+                "mutantdino.resourcemonitor",
                 "redhat.vscode-yaml",
-                "Tyriar.sort-lines"
-            ]
+                "richie5um2.vscode-sort-json",
+                "shardulm94.trailing-spaces",
+                "streetsidesoftware.code-spell-checker",
+                "tombonnike.vscode-status-bar-format-toggle",
+                "Tyriar.sort-lines",
+                "usernamehw.errorlens",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ],
+            "settings": {}
         }
-    },
-    "remoteUser": "devcontainer"
+    }
 }
