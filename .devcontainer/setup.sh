@@ -254,7 +254,7 @@ delete_file() {
 # Execute the main setup process.
 #
 # Parameters:
-#   None
+#   mode (str): The mode to enable ("--quiet" or "--loud").
 #
 main() {
     local self="$0"
